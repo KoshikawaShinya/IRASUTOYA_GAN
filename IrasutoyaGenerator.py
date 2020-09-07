@@ -8,9 +8,9 @@ seed = 502
 
 z_dim = 100
 
-model = K.models.load_model('saved_model/20000_Noda.h5')
+model = K.models.load_model('saved_model/mizumashi_model.h5')
 
-np.random.seed(seed=seed)
+#np.random.seed(seed=seed)
 z = np.random.normal(0, 1, (1, z_dim))
 
 img = model.predict(z)
@@ -19,6 +19,6 @@ print(img.shape)
 
 img = 0.5 * img + 0.5
 
-plt.imsave('generate_img/irasuto.jpg', img)
+plt.imsave('generate_img/irasuto_2.jpg', img)
 plt.imshow(img)
 plt.show()
