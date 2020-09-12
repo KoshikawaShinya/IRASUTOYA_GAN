@@ -143,6 +143,7 @@ def train(iterations, batch_size, sample_interval):
             sample_images(generator, iteration)
         
         if (iteration + 1) % (sample_interval+1) == 0:
+            sample_images()
 
 def sample_images(generator, iteration, image_grid_rows=4, image_grid_columns=4):
 
